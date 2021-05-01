@@ -74,7 +74,7 @@ void setTextTextureAndRect(SDL_Renderer *renderer, int x, int y, char *text, TTF
     SDL_Surface * surface;
     SDL_Color textColor = { 255, 255, 255, 0 };
 
-    surface = TTF_RenderText_Solid(font, text, textColor);
+    surface = TTF_RenderText_Blended(font, text, textColor);
     *textTexture = SDL_CreateTextureFromSurface(renderer, surface);
 
     textWidth = surface->w;
